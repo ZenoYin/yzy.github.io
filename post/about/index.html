@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于 |  🦉📚Hololo</title>
+<link rel="shortcut icon" href="https://yz1.xyz/favicon.ico?v=1659111955611">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yz1.xyz/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="关于 |  🦉📚Hololo - Atom Feed" href="https://yz1.xyz/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+Q：为什么要写博客？
+A：希望自己能够主动的对所学知识进行整理、复盘、归档和输出。
+
+👨‍💻 关于我
+感谢你费心了解我，我是尹正一，毕业于青岛科技大学智能电网信息工程专业，现居于山东省。
+喜欢与众不同，爱折腾，能享受孤独。
+不入流的嵌..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yz1.xyz">
+  <img class="avatar" src="https://yz1.xyz/images/avatar.png?v=1659111955611" alt="">
+  </a>
+  <h1 class="site-title">
+     🦉📚Hololo
+  </h1>
+  <p class="site-description">
+    Keep Pushing the limits
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/vpointer" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+        <a href="https://www.zhihu.com/people/zeno-yin" target="_blank">
+          <i class="ri-zhihu-line"></i>
+        </a>
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-01-25
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <blockquote>
+<p>Q：为什么要写博客？<br>
+A：希望自己能够主动的对所学知识进行整理、复盘、归档和输出。</p>
+</blockquote>
+<h2 id="关于我">👨‍💻 关于我</h2>
+<p>感谢你费心了解我，我是尹正一，毕业于<a href="https://www.qust.edu.cn/">青岛科技大学</a>智能电网信息工程专业，现居于山东省。<br>
+喜欢与众不同，爱折腾，能享受孤独。<br>
+不入流的嵌入式开发，希望自己能不断进步。</p>
+<h2 id="联系方式">📬 联系方式</h2>
+<p>QQ:3399511577<br>
+WeChat:yzy057<br>
+Email:yzybab@gmail.com</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E6%88%91">👨‍💻 关于我</a></li>
+<li><a href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">📬 联系方式</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Copyright ©2022 Hololo
+  <a class="rss" href="https://yz1.xyz/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
